@@ -6,6 +6,15 @@
 <html lang="en">
 <!-- All of the meta data for the page belongs in the header tag -->
 <head>
+	<!-- Google tag (gtag.js) -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=G-B63KN96H63"></script>
+	<script>
+	window.dataLayer = window.dataLayer || [];
+	function gtag(){dataLayer.push(arguments);}
+	gtag('js', new Date());
+
+	gtag('config', 'G-B63KN96H63');
+	</script>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<!-- Link to the favicon image -->
@@ -62,6 +71,23 @@
 			showcase the three opera forms that I grew up with to you: Peking Opera, Hu Opera, and Yue Opera. If you would like learn more, I am happy
 			to guide you how to start and provide you with resources!
 		</p><br><br>
+
+		<!-- modify this form HTML and place wherever you want your form -->
+		<form
+		action="https://formspree.io/f/moqbpype"
+		method="POST"
+		>
+		<label>
+		Your email:
+		<input type="email" name="email">
+		</label>
+		<label>
+		Your message:
+		<textarea name="message"></textarea>
+		</label>
+		<!-- your other form fields go here -->
+		<button type="submit">Send</button>
+		</form>
 	</main>
 
 	<!-- Footer is a sematic tag page that aids readability -->
