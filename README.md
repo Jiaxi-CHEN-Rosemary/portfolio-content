@@ -9,3 +9,5 @@ Checkpoint 2: simple HTML and CSS
 - [x] Width, border, margin, padding are used on every image. :hover pseudo-class used to add a hover effect
 - [ ] No errors on any validator
 - [x] All links work, and images are linked to correctly
+
+Checkpoint 4: mobile view
