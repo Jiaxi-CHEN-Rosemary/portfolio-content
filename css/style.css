@@ -1,24 +1,50 @@
 /*Add padding and margin to space out the page.
 Make the font larger too.*/
 body{
-	margin:auto;
-	padding:10%;
-	font-size:150%;
+	margin-right: auto;
+  margin-left: auto;
+	padding: 10%;
+	font-family: 'Poppins';
+  background: url('../images/background2.jpg');
+  display: grid;
+  grid-template-rows: auto;
+  grid-template-columns: 1fr;
+}
+
+banner{
+  grid-row: 1;
+}
+
+header{
+  grid-row: 2;
+}
+
+main{
+  grid-row: 3;
+}
+
+aside{
+  grid-row: 4;
 }
 
 /*Make the h1 heading bigger with a bold font*/
 h1{
 	font-size: 2em;
 	font-weight: bold;
+  color: #8B0000;
+  font-family: 'Poppins', sans-serif;
+  padding: 10px;
+  margin: 10px;
 	text-align: center;
 }
 
 .active{
 	background: #8B0000;
-    text-transform: uppercase;
-	text-align: center;
-	text-decoration: none;
-    border-radius: 80%;
+  text-transform: uppercase;
+	text-align: left;
+  border-radius: 0%;
+  justify-content: center;
+  text-align: center;
 }
 
 .active a{
@@ -35,14 +61,51 @@ h1{
 
 /*Style the images*/
 img{
-    height: 200px;
-	width: auto;
-    border: 3px /*solid blue*/;
-    padding: 10px 10px;
-    border-radius: 10px;
-    margin: 10px;
+  height: auto;
+	width: 300px;
+  border: 3px /*solid blue*/;
+  padding: 1px;
+  border-radius: 10px;
+  margin: 10px;
 	justify-content: space-evenly;
 }
+
+img:hover, *:focus{
+  box-shadow:#8B0000;
+}
+
+.movingimage {
+  padding: 30px;
+  border: 30px;
+  animation-name: myanimation;
+  animation-duration: 2s;
+}
+
+  /* bounce on hover code */
+.movingimage:hover {
+  animation-name: myanimation;
+  animation-duration: 3s;
+  animation:
+    bounce 300ms
+    alternate infinite
+    cubic-bezier(.2, .65, .6, 1);
+}
+
+@keyframes myanimation {
+  from {
+    transform: translateY(0px);
+  }
+  to {
+    transform: translateY(-30px);
+  }
+}
+
+@media screen and (prefers-reduced-motion: reduce) {
+  .movingimage, .movingimage:hover {
+      animation: none;
+  }
+}
+
 
 figcaption {
 	padding: 0.5em;
@@ -50,14 +113,11 @@ figcaption {
 	text-align: center;
   }
 
-img:hover, *:focus{
-    box-shadow: 10px 10px #8B0000;
-}
-  /* every 3rd image takes up one third of the column */
+  /* every 3rd image takes up one third of the column
 img:nth-child(2n){
-    /*  takes up one third of the column */
+    /*  takes up one third of the column
     grid-column: 1/3;
-  }
+  }*/
 
 /*Make the h2 heading match h1*/
 h2{
@@ -73,6 +133,7 @@ h3{
 /*Improve the spacing for paragraphs AND headings*/
 p, h1, h2 {
     padding: 10px;
+    font-family: 'Poppins', sans-serif;
 }
 
 /*Add borders around the main components and some
@@ -83,29 +144,51 @@ space too*/
 }*/
 
 
-/*Change the styling for all of the list 
+/*Change the styling for all of the list
 items in the nav section*/
+
+/* FLEX */
+nav ul {
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  justify-content: space-around;
+}
 nav li{
-	/*background-color: #ECFF4D;*/
+padding: 20px;
+width: 100%;
+height: 30px;
+background: rgb(157, 69, 92);
+text-align: center;
+font-size: 20px;
+}
+
+/*nav li{
+	background-color: #ECFF4D;
 	padding:10px;
 	width:25%;
-	border:1px/* solid black*/;
+	border:1px solid black;
 	display: inline-block;
 	width: 20%;
-}
+}*/
 
 /*Added this so the links stay the same color*/
 a:visited{color:pink}
 
 /* Change the footer style*/
-.footer {
-    border: 2px;
-    padding: 15px;
-    text-align: center;
-    font-weight: bold;
-    font-size: 15px;
+
+#footertext {
+  font: 15px italic black;
 }
 
+footer {
+  /* padding: 10px; */
+  text-align: center;
+  background-color: rgb(241, 170, 191);
+  margin-top: 10px;
+  grid-row: 5;
+}
+/*
 .container{
     border: 3px gray dashed;
     border-radius: 10px;
@@ -113,13 +196,38 @@ a:visited{color:pink}
     grid-template-columns: 250px 250px;
     row-gap: 20px;
     /* column-gap: 20px; */
-    text-align: justify;
+   /* text-align: justify;
     justify-content: space-between;
-  }
+  }*/
 
   /*Change the jump to main*/
   .skip {
-      text-align: right;
-      font-size: 20px;
+    text-align: right;
+    font-size: 15px;
+    position: relative;
+    right: 500px;
   }
+
+  .contact{
+    padding: 20px;
+    background:white;
+    border: black solid;
+    border-radius: 10px;
+    display: block;
+    /* grid-template-columns: 350px 350px; */
+    row-gap: 20px;
+    text-align: stretch;
+    justify-content: space-between;
+  }
+
+  form{
+    font-family: 'Poppins', sans-serif;
+  }
+
+  .galleryflex {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
 

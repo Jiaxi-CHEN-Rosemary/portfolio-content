@@ -24,6 +24,11 @@
 	<link rel="stylesheet" href="css/html5reset.css">
 	<!-- Link to the stylesheet -->
 	<link rel="stylesheet" href="css/style.css">
+	<script src="https://kit.fontawesome.com/bd4b741a20.js" crossorigin="anonymous"></script>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Poiret+One&display=swap" rel="stylesheet">
+	<!-- font -->
 	<title>Chinese Opera/Xiqu</title>
 	<!-- The h1 is a semantic tag that aids accessibility -->
 </head><!-- All of the visible code in the page belongs in the body tag -->
@@ -53,14 +58,13 @@
 	<main  id="main">
 		<!-- <p>Chinese Opera</p> -->
 		<figure>
-			<img src="images/indexopera.png" width="200" alt="A picture of multiple characters in Chinese Opera" class="center"/>
-			<figcaption>Multiple different characters in Chinese Opera &copy; CC.NEWS</figcaption>
+			<img class = "movingimage" src="images/indexopera.png" width="200" alt="A picture collection of multiple characters in Chinese Opera" class="center"/>
 		</figure>
 			<p>
 				Tranditional Chinese Opera, known as Xiqu in Chinese, is a form of musical theatre in China with more than 1,000 years
 				of history. It is a great form of arts incorporated music, song and dance, martial arts, acrobatics, costume and make-up art, as well as literary art.
 				As an international Chinese student, I want to showcase some opera forms to introduce this great  pearl in my culture.
-				For any questions, comments, or inquiries, you can get in touch with me via the email: jiaxich@umich.edu.
+				For any questions, comments, or inquiries, you can get in touch with me via the form below.
 			</p><br><br>
 
 		<!-- Make sure your anchor tags have a link (href) and a clickable component -->
@@ -68,31 +72,40 @@
 		<p>Hello! My name is Rosemary, and I am so excited you're here. I was born in Shanghai, China and spent my 19 years of life at this great city.
 			My Mom has a nice voice and is a fan of tranditional Chinese Operas. Therefore, I grew up with her voice and learned to sing multiple of them.
 			Chinese Opera has become my lullaby songs and beared so many precious childhood memories of mine. In this portfolio, I would like to
-			showcase the three opera forms that I grew up with to you: Peking Opera, Hu Opera, and Yue Opera. If you would like learn more, I am happy
-			to guide you how to start and provide you with resources!
+			showcase the three opera forms that I grew up with to you: Peking Opera, Hu Opera, and Yue Opera. If you would like learn more, please contact me via the form below.
 		</p><br><br>
 
 		<!-- modify this form HTML and place wherever you want your form -->
-		<form
-		action="https://formspree.io/f/moqbpype"
-		method="POST"
-		>
-		<label>
-		Your email:
-		<input type="email" name="email">
-		</label>
-		<label>
-		Your message:
-		<textarea name="message"></textarea>
-		</label>
-		<!-- your other form fields go here -->
-		<button type="submit">Send</button>
+		<form action="https://formspree.io/f/moqbpype" method="POST">
+			<fieldset>
+				<legend>Let's Talk</legend>
+				<div class="contact" id="fn">
+					<div>
+						<label for="fullname"><i class="fa-solid fa-user"></i> Full Name</label>
+						<input type="text" name="name" id="fullname" placeholder="Enter your name">
+					</div>
+					<div>
+						<label for="email" id="ea"><i class="fa-solid fa-envelope"></i> Email Address</label>
+						<input type="email" name="email" id="email" placeholder="Enter your email">
+					</div>
+					<div>
+						<label for="subject" id="sub"><i class="fa-solid fa-magnifying-glass-arrow-right"></i> Subject</label>
+						<input type="text" name="subject" id="subject" placeholder="Enter your subject">
+					</div>
+					<div>
+						<label for="message" id="msg"><i class="fa-solid fa-comment"></i> What's on your mind?</label>
+						<textarea id="message" name="message" placeholder="Enter your message"></textarea>
+					</div>
+						<input type="submit" value="Submit">
+					</div>
+			</fieldset>
 		</form>
 	</main>
 
 	<!-- Footer is a sematic tag page that aids readability -->
 	<footer>
-		<p>&copy;Rosemary Chen, 2022</p>
+		<p id="footertext">&copy;Rosemary Chen, 2022</p>
+		<p id="footertext"> Pictures &copy; CC.NEWS.</p>
 	</footer>
 </body>
 </html>
