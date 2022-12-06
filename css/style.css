@@ -54,7 +54,7 @@ h1{
 	font-size: 2em;
 	font-weight: bold;
   color: #8B0000;
-  background-color: rgb(255, 255, 255, 0.0);
+  background-color: rgb(255, 255, 255, 0.5);
   font-family: 'Poppins', sans-serif;
   padding: 10px;
 	text-align: center;
@@ -129,20 +129,20 @@ figcaption {
 	padding: 0.5em;
 	font-size: 75%;
 	text-align: center;
-  background-color: rgb(255, 255, 255, 0.0);
+  background-color: rgb(255, 255, 255, 0.5);
 }
 
 /*Make the h2 heading match h1*/
 h2{
 	font-size: 1.5em;
 	font-weight: bold;
-  background-color: rgb(255, 255, 255, 0.0);
+  background-color: rgb(255, 255, 255, 0.5);
 }
 /*Make the h3 heading*/
 h3{
 	font-size: 1em;
 	font-weight: bold;
-  background-color: rgb(255, 255, 255, 0.0);
+  background-color: rgb(255, 255, 255, 0.5);
 }
 
 p, aside{
@@ -156,7 +156,7 @@ aside, p, h1, h2 {
 }
 
 p{
-  background-color: rgb(255, 255, 255, 0.0);
+  background-color: rgb(255, 255, 255, 0.5);
 }
 
 aside{
