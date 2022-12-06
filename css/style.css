@@ -20,24 +20,6 @@
   }
 }
 
-/*Jump to main*/
-.skip {
-  text-align: right;
-  font-size: 15px;
-  position: relative;
-  right: 500px;
-  background-color: #000000;
-}
-
-.skip:focus{
-  margin-top: 50px;
-   background-color: #000000;
-   position: static;
-   color: white;
-   width: auto;
-   height: auto;
-}
-
 
 body{
 	margin-right: auto;
@@ -89,6 +71,25 @@ h1{
 .active a{
 	text-decoration: none;
 	color: white;
+}
+
+/*Jump to main*/
+.skip {
+  text-align: right;
+  font-size: 15px;
+  position: relative;
+  right: 500px;
+  background-color: #000000!important;
+  color: white;
+}
+
+.skip:focus{
+  margin-top: 50px;
+   background-color: #000000!important;
+   position: static;
+   color: white;
+   width: auto;
+   height: auto;
 }
 
 /*Style the images*/
