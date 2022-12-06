@@ -176,6 +176,10 @@ nav li{
   font-size: 20px;
 }
 
+a:link{
+  color:#FBE3E7;
+}
+
 .asidelink{
   color:#8B0000 !important;
 }
