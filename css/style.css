@@ -76,6 +76,19 @@ h1{
 	text-align: center;
 }
 
+.active{
+	background: #8B0000;
+  text-transform: uppercase;
+	text-align: left;
+  border-radius: 0%;
+  justify-content: center;
+  text-align: center;
+}
+
+.active a{
+	text-decoration: none;
+	color: white;
+}
 
 /*Style the images*/
 img{
@@ -153,12 +166,6 @@ nav ul{
   align-content: center;
   justify-content: center;
 }
-
-nav:link{
-  color:#FBE3E7;
-  background:rgb(157, 69, 92);
-}
-
 nav li{
   padding: auto;
   width: 250px;
@@ -168,28 +175,13 @@ nav li{
   font-size: 20px;
 }
 
-
-.active{
-	background: #8B0000 !important;
-  text-transform: uppercase;
-	text-align: left;
-  border-radius: 0%;
-  justify-content: center;
-  text-align: center;
+a:link{
+  color:#FBE3E7;
 }
-
-.active a{
-	text-decoration: none;
-	color: white;
-}
-
 
 .asidelink{
   color:#8B0000 !important;
-  background:pink;
 }
-
-
 
 /*Added this so the links stay the same color*/
 a:visited{color:#FBE3E7}
