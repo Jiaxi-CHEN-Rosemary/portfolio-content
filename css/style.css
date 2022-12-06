@@ -1,14 +1,53 @@
-/*Add padding and margin to space out the page.
-Make the font larger too.*/
+/*animation*/
+@keyframes myanimation {
+  from {
+    transform: translateY(0px);
+  }
+  to {
+    transform: translateY(-30px);
+  }
+}
+
+@media screen and (prefers-reduced-motion: reduce) {
+  .movingimage, .movingimage:hover {
+    animation: none !important;
+  }
+  img:active{
+    transform: none !important;
+  }
+  img:hover, *:focus{
+    transform: none !important;
+  }
+}
+
+/*Jump to main*/
+.skip {
+  text-align: right;
+  font-size: 15px;
+  position: relative;
+  right: 500px;
+}
+
+.skip:focus{
+  margin-top: 50px;
+   background-color: #000000;
+   position: static;
+   color: white;
+   width: auto;
+   height: auto;
+}
+
+
 body{
 	margin-right: auto;
   margin-left: auto;
-	padding: 10%;
 	font-family: 'Poppins';
   background: url('../images/background2.jpg');
+  background-size: 90vw auto;
   display: grid;
   grid-template-rows: auto;
-  grid-template-columns: 1fr;
+  grid-template-columns: 90vw;
+  justify-content: center;
 }
 
 .topline{
@@ -34,7 +73,6 @@ h1{
   color: #8B0000;
   font-family: 'Poppins', sans-serif;
   padding: 10px;
-  margin: 10px;
 	text-align: center;
 }
 
@@ -52,13 +90,6 @@ h1{
 	color: white;
 }
 
-.center {
-	display: block;
-	margin-left: auto;
-	margin-right: auto;
-	/*width: 50%;*/
-  }
-
 /*Style the images*/
 img{
   height: auto;
@@ -67,16 +98,16 @@ img{
   padding: 1px;
   border-radius: 10px;
   margin: 10px;
-	justify-content: space-evenly;
+
 }
 
 img:hover, *:focus{
   box-shadow:#8B0000;
+  transform: scale(1.03);
 }
 
 .movingimage {
-  padding: 30px;
-  border: 30px;
+  padding: auto;
   animation-name: myanimation;
   animation-duration: 2s;
 }
@@ -91,33 +122,11 @@ img:hover, *:focus{
     cubic-bezier(.2, .65, .6, 1);
 }
 
-@keyframes myanimation {
-  from {
-    transform: translateY(0px);
-  }
-  to {
-    transform: translateY(-30px);
-  }
-}
-
-@media screen and (prefers-reduced-motion: reduce) {
-  .movingimage, .movingimage:hover {
-      animation: none;
-  }
-}
-
-
 figcaption {
 	padding: 0.5em;
 	font-size: 75%;
 	text-align: center;
-  }
-
-  /* every 3rd image takes up one third of the column
-img:nth-child(2n){
-    /*  takes up one third of the column
-    grid-column: 1/3;
-  }*/
+}
 
 /*Make the h2 heading match h1*/
 h2{
@@ -130,51 +139,49 @@ h3{
 	font-weight: bold;
 }
 
-/*Improve the spacing for paragraphs AND headings*/
-p, h1, h2 {
-    padding: 10px;
-    font-family: 'Poppins', sans-serif;
+p, aside{
+  display: block;
+  width: 85vw;
 }
 
-/*Add borders around the main components and some
-space too*/
-/*header, nav, main, footer{
-	border: 3px solid red;
-	margin: 20px 0;
-}*/
+/*Improve the spacing for paragraphs AND headings*/
+aside, p, h1, h2 {
+    margin: 10px;
+}
 
+aside{
+  font-style: italic;
+  background-color: pink;
+}
 
-/*Change the styling for all of the list
-items in the nav section*/
+/*Change the styling for all of the list items in the nav section*/
+.navcontainer{
+  text-align: center;
+}
 
-/* FLEX */
-nav ul {
-  display: flex;
-  flex-direction: column;
+nav ul{
+  display: grid;
+  grid-template-rows: repeat(4, 1fr);
+  grid-gap: 10px;
   align-content: center;
-  justify-content: space-around;
+  justify-content: center;
 }
 nav li{
-padding: 20px;
-width: 100%;
-height: 30px;
-background: rgb(157, 69, 92);
-text-align: center;
-font-size: 20px;
+  padding: auto;
+  width: 250px;
+  height: 30px;
+  background: rgb(157, 69, 92);
+  text-align: center;
+  font-size: 20px;
 }
 
 a:link{
   color:#FBE3E7;
 }
 
-/*nav li{
-	background-color: #ECFF4D;
-	padding:10px;
-	width:25%;
-	border:1px solid black;
-	display: inline-block;
-	width: 20%;
-}*/
+.asidelink{
+  color:#8B0000 !important;
+}
 
 /*Added this so the links stay the same color*/
 a:visited{color:#FBE3E7}
@@ -192,37 +199,18 @@ footer {
   margin-top: 10px;
   grid-row: 5;
 }
-/*
-.container{
-    border: 3px gray dashed;
-    border-radius: 10px;
-    display: block;
-    grid-template-columns: 250px 250px;
-    row-gap: 20px;
-    /* column-gap: 20px; */
-   /* text-align: justify;
-    justify-content: space-between;
-  }*/
 
-  /*Change the jump to main*/
-  .skip {
-    text-align: right;
-    font-size: 15px;
-    position: relative;
-    right: 500px;
-  }
-
-  .contact{
-    padding: 20px;
-    background:white;
+.contact{
+    font-size: 12px;
+    margin-left: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
     border: black solid;
+    background:white;
     border-radius: 10px;
-    display: block;
-    /* grid-template-columns: 350px 350px; */
-    row-gap: 20px;
+    display: inline-block;
     text-align: stretch;
-    justify-content: space-between;
-  }
+}
 
   form{
     font-family: 'Poppins', sans-serif;
@@ -230,8 +218,108 @@ footer {
 
   .galleryflex {
     display: flex;
-    justify-content: center;
+    justify-content: space-evenly;
     flex-wrap: wrap;
 }
+/*Tablet view*/
+@media only screen and (min-width: 768px) {
+  aside{
+    width: 50%;
+    padding-left: 10px;
+    margin-left: 10px;
+    float: right;
+  }
+
+  /*home page theme figure in the center*/
+.Pcontainer{
+  text-align: center;
+}/*Don't know why, but this cannot be used in mobile, or it will cause overflow*/
+  /*nav*/
+  nav ul{
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    justify-items: center;
+  }
+  .nav li{
+    font-size: 24px;
+    width: 50%;
+  }
+  /*image hover is larger*/
+  img:hover, *:focus{
+    transform: scale(1.10);
+  }
+/*form*/
+  .form-box{
+    width: 60%;
+    position: relative;
+    left: 50%;
+    margin-left:-15%;
+  }
+
+  .contact{
+    margin-left: 0px;
+    padding-left: 20px;
+    padding-left: 20px;
+    padding-top: 10px;
+  }
+}
+
+/*Desktop view*/
+@media only screen and (min-width: 1024px){
+/*home page theme figure in the center*/
+  .Pcontainer{
+    text-align: center;
+  }
+
+  /*put aside as side bar*/
+  aside{
+    width: 30%;
+    padding-left: 15px;
+    margin-left: 15px;
+    float: right;
+  }
+
+  /*nav*/
+  nav ul{
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 1fr;
+    justify-items: center;
+  }
+  .nav li{
+    font-size: 24px;
+    width: 25%;
+  }
+/*Gallery change*/
+img:hover, *:focus{
+  transform: scale(1.10);
+}
+
+img:active{
+  z-index: 3; /*make sure the enlarged version is on top*/
+  width: 612px;
+  height: 410px;
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  margin-left:-306px;
+  margin-top:-205px;
+}
+
+/*form*/
+.form-box{
+  width: 60%;
+  position: relative;
+  left: 50%;
+  margin-left:-15%;
+}
+.contact{
+  font-size: 14px;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 10px;
+}
+
+}
+
 
 
